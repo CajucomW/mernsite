@@ -3,18 +3,22 @@ import { Link, Switch, Route } from 'react-router-dom'
 
 import './App.css';
 import './App.min.css';
-import headerImage from './img/home-bg.jpg';
+// import headerImage from './img/home-bg.jpg';
 
 import LandingPage from './components/pages/LandingPage/LandingPage.js';
 import Blog from './components/pages/Blog/Blog.js';
 import WriteArticle from './components/pages/WriteArticle/WriteArticle.js';
+
+const headerImage = {
+  backgroundImage: 'url(./img/home-bg.jpg)',
+}
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         {/* <!-- Navigation --> */}
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top mainNav">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
           <div className="container">
             <a className="navbar-brand" href="index.html">Wence Cajucom</a>
             <button className="navbar-toggler navbar-toggler-right" 
@@ -44,7 +48,7 @@ class App extends Component {
         </nav>
 
         {/* <!-- Page Header --> */}
-        <header className="masthead" img={headerImage}>
+        <header className="masthead" style={headerImage}>
           <div className="overlay"></div>
           <div className="container">
             <div className="row">
@@ -163,11 +167,11 @@ class App extends Component {
         </footer>
 
         {/* <!-- Bootstrap core JavaScript --> */}
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./vendor/jquery/jquery.min.js"></script>
+        <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         {/* <!-- Custom scripts for this template --> */}
-        <script src="js/clean-blog.min.js"></script>
+        <script src="./js/clean-blog.min.js"></script>
 
 
       </div>
